@@ -48,7 +48,7 @@ class Locations extends Component {
         
         <button onClick={this.handleLocationsDisplay}>{this.state.buttonText ? "Hide Locations" : "Show Locations"}</button>
         
-        <ul>
+        <ul id="location-list">
             {this.state.display? locations: null}
         </ul>
       

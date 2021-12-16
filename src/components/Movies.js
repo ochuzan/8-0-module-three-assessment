@@ -42,20 +42,23 @@ class Movies extends Component {
 
     return (
       <div className="movies">
-        <h1>Select a Movie</h1>
+        <main>
+            <h1>Select a Movie</h1>
 
-        <div>
-            <select onChange={this.handleDropdownChange}>
-                <option></option>
-                {movieOptions}
-            </select>
-        </div>
+            <div>
+                <select onChange={this.handleDropdownChange}>
+                    <option></option>
+                    {movieOptions}
+                </select>
+            </div>
 
-        <div>
-            <h3>{this.state.selectedMovie? "Title:": null} {selectedMovieObj?.title}</h3>
-            <h3>{this.state.selectedMovie? "Release Date:": null} {selectedMovieObj?.release_date}</h3>
-            <h3>{this.state.selectedMovie? "Description:": null} {selectedMovieObj?.description}</h3>
-        </div>
+            <div>
+                <h3>{this.state.selectedMovie? "Title:": null} {selectedMovieObj?.title}</h3>
+                {selectedMovieObj ? (<img src={selectedMovieObj.image} alt="Selected movie"/>) : null}
+                <h3>{this.state.selectedMovie? "Release Date:": null} {selectedMovieObj?.release_date}</h3>
+                <h3>{this.state.selectedMovie? "Description:": null} {selectedMovieObj?.description}</h3>
+            </div>
+        </main>
       </div>
     );
   }

@@ -7,36 +7,95 @@ nav ul{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  background-color: turquoise;
+  background-color: lightskyblue;
   list-style: none;
   padding: 20px;
   margin: 0;
 }
 
-header ul li {
+nav ul li {
   display: inline-block;
   font-size: 18px;
   padding: 0 25px;
 }
 
-header ul li a {
-  font-weight: 500;
+nav ul li a {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
   padding-bottom: 5px;
   text-decoration: none;
 }
 
 #home {
   text-align: center;
+  background-color: lightslategray;
 }
 
-.movies {
+#home h1 {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.movies > * {
+  font-family: 'Courier New', Courier, monospace;
   text-align: center;
+}
+
+.movies h1 {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.movies select {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: bisque;
+  text-align: center;
+}
+
+main {
+  background-color: mediumaquamarine;
 }
 
 .people {
+  font-family: 'Courier New', Courier, monospace;
   text-align: center;
+  background-color: mistyrose;
+}
+
+.people h1 {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.people button,
+.people input {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: bisque;
 }
 
 .locations {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: bisque;
+}
+
+.locations h1 {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.locations button {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: bisque;
+}
+
+.locations ul li {
+  list-style: none;
+  padding: 15px;
+  font-weight: 600;
 }
