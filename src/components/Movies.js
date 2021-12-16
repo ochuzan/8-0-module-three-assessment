@@ -32,8 +32,8 @@ class Movies extends Component {
     }
 
     render(){
-        let movieOptions = this.state.movieData.map(movie => {
-            return <option value={movie.title}>{movie.title}</option>
+        let movieOptions = this.state.movieData.map((movie) => {
+            return <option key={movie.id} value={movie.title}>{movie.title}</option>
         })
 
         let selectedMovieObj = this.state.movieData.find(movie => {

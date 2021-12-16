@@ -26,28 +26,32 @@ class Locations extends Component {
             buttonText: !this.state.buttonText,
             display: !this.state.display
         })
-    
     }
 
   render(){
     let locations = this.state.locationData.map(location => {
         return (
-            <ul>
-                <li>
-                    Name: {location.name}
-                    <br />
-                    Climate: {location.climate}
-                    <br />
-                    Terrain: {location.terrain}
-                </li>
-            </ul>
+            <li key={location.id}>
+                Name: {location.name}
+                <br />
+                Climate: {location.climate}
+                <br />
+                Terrain: {location.terrain}
+                <br />
+            </li>
         )
     })
     return (
       <div className="locations">
+        
         <h1>List of Locations</h1>
+        
         <button onClick={this.handleLocationsDisplay}>{this.state.buttonText ? "Hide Locations" : "Show Locations"}</button>
-        {this.state.display? locations: null}
+        
+        <ul>
+            {this.state.display? locations: null}
+        </ul>
+      
       </div>
     );
   }
